@@ -20,7 +20,7 @@
     "lint:prettier": "check-prettier lint",
     "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
     "prettier": "prettier -c --write \"**/*\"",
-    "start": "umi dev",
+    "start": "MOCK=none UMI_UI=none REACT_APP_ENV=prod umi dev",
     "start:dev": "cross-env REACT_APP_ENV=dev MOCK=none umi dev",
     "start:no-mock": "cross-env MOCK=none umi dev",
     "start:no-ui": "cross-env UMI_UI=none umi dev",
@@ -32,7 +32,7 @@
     "tsc": "tsc",
     "ui": "umi ui"
   },
-  "husky": {
+  "--husky": {
     "hooks": {
       "pre-commit": "npm run lint-staged"
     }
@@ -51,14 +51,15 @@
   ],
   "dependencies": {
     "@ant-design/dark-theme": "^1.0.3",
-    "@ant-design/icons": "^4.0.0-alpha.19",
-    "@ant-design/pro-layout": "^5.0.0",
-    "@ant-design/pro-table": "^2.0.0",
-    "@antv/data-set": "^0.11.0",
+    "@ant-design/icons": "4.2.2",
+    "@ant-design/pro-layout": "6.5.12",
+    "@ant-design/pro-table": "2.9.16",
+    "@antv/data-set": "0.11.7",
     "@material-ui/core": "^4.9.3",
     "@material-ui/icons": "^4.9.1",
-    "antd": "^4.0.0-rc.1",
+    "antd": "4.8.0",
     "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
     "dva": "^2.6.0-beta.16",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
